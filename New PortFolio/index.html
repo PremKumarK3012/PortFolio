@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+CU:wght@100..400&family=Playwrite+IN:wght@100..400&family=Playwrite+PE:wght@100..400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+CU:wght@100..400&family=Playwrite+IN:wght@100..400&family=Playwrite+PE:wght@100..400&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Ga+Maamli&family=Kalam:wght@300;400;700&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=New+Amsterdam&family=Playwrite+CU:wght@100..400&family=Playwrite+CZ:wght@100..400&family=Playwrite+IN:wght@100..400&family=Playwrite+PE:wght@100..400&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'mb': '320px',
+          '2mb': '480px',
+          'sm': '600px',
+          'md': '768px',
+          'lg': '1025px',
+          'xl': '1281px',
+          '2xl': '1496px'
+
+        },
+        extend: {
+
+          fontFamily: {
+            cursive: ["Playwrite IN", 'cursive'],
+            course: ["Lobster", 'sans-serif'],
+            name: ["Bona Nova SC", 'serif']
+          },
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="mode transition-all ease-in duration-500 overflow-x-hidden	 ">
+
+  <!-- NavBar  -->
+
+  <nav class="flex flex-row items-center justify-between  w-full   transition-all ease-in duration-500 z-[1000] ">
+
+    <!-- Nav Logo -->
+    <div class="">
+      <a class="font-medium hover:text-emerald-500 ml-4 text-xl" href="#home">PREM KUMAR K</a>
+
+    </div>
+
+    <!-- Nav Menu -->
+
+    <div class="md:flex mb:flex mb:flex-row-reverse md:flex-row justify-between items-center ">
+      <div>
+        <ul style="  z-index:100;" class=" md:flex md:items-center md:static absolute w-full left-0  md:py-0 py-4 md:pl-0 pl-7  md:opacity-100 opacity-0  transition-all ease-in duration-500
+                     mb:bg-zinc-800">
+          <li class="  mx-4 my-3 "><a class=" font-medium " href="#home">Home</a></li>
+          <li class=" mx-4 my-3 "><a class=" font-medium " href="#about">About</a></li>
+          <li class=" mx-4 my-3  "><a class="font-medium " href="#skill">Skills</a></li>
+          <li class=" mx-4 my-3"><a class="font-medium " href="#project">Projects</a></li>
+          <li class=" mx-4 my-3 "><a class="font-medium " href="#education">Education</a></li>
+          <li class="mx-4 my-3 "><a class="font-medium  " href="#contact">Contact</a></li>
+        </ul>
+        <!-- Menu Icon -->
+        <span class="text-3xl font-bold cursor-pointer  md:hidden block mb:mt-2 ">
+          <ion-icon name="menu-outline" onclick=menu(this)></ion-icon>
+        </span>
+      </div>
+      <!-- Dark Mode Toggle Button -->
+      <div class="md:mb-2">
+        <button id="toggle-theme" class=' ' onclick="theme()">
+          <ion-icon name="moon-outline" class="moon w-6 h-6 "></ion-icon>
+          <ion-icon name="sunny-outline" class="sun w-6 h-6"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Home Page -->
+  <section id="home" class="z-[1000]">
+    <div class="mb:flex mb:flex-col mb:justify-between mb:items-center mb:mt-20
+                 md:flex md:flex-row md:justify-between md:items-center  md:mt-32
+                 lg:mt-32
+                 xl:ml-32">
+
+      <!-- Home Intro -->
+      <div class="font-medium mb:ml-3 sm:ml-20 md:w-2/4 md:ml-4 md:mt-10 lg:ml-20" data-aos="fade-right"
+        data-aos-duration="1000">
+        <h3 class=" font-bold  mb:text-2xl 2mb:text-3xl">
+          Hello!!!</h3>
+        <h1 class=" font-bold type text-5xl mb:text-3xl 2mb:text-4xl"><span class="clr">I'm
+          </span> </h1>
+        <h3 class="text-emerald-500 font-course  blink text-4xl rounded-full font-medium mt-1 mb:text-3xl 2mb:text-4xl">
+        </h3>
+        <p class="para font-light mt-2  text-1xl sm:w-4/5 md:w-10/12 ">Innovative
+          Software Developer crafting cutting-edge
+          digital solutions,blending creativity with technical experience ideas into seamless, high-performing
+          applications.
+        </p>
+
+
+
+        <div class="mt-5">
+          <a href="https://drive.google.com/file/d/1ID_HCJjy0bpR8ty1BxS70lU6-TgNtws5/view?usp=sharing"
+            class=" rounded-full  font-bold  w-[135px] bg-stone-900 h-[40px]  flex items-center justify-center  cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+            Download
+            CV</a>
+        </div>
+
+        <!-- Social Media -->
+        <!-- <div class="mt-5">
+          <a href="https://www.linkedin.com/in/prem04/"
+            class="rounded-full  bg-stone-900 px-3  py-3 bx bxl-linkedin-square text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+          </a>
+          <a href=""
+            class="rounded-full  bg-stone-900 px-3  py-3  ml-1 bx bxl-instagram  text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+          </a>
+          <a href=""
+            class="rounded-full  bg-stone-900 px-3  py-3 ml-1  bx bxl-whatsapp text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ">
+          </a>
+
+          <a href=""
+            class="rounded-full  bg-stone-900 px-3  py-3 ml-1 bx bxl-github text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+          </a>
+        </div> -->
+      </div>
+
+
+
+      <!-- Home Image -->
+      <div class="md:w-2/4 mb:mt-8 md:mr-5" data-aos="fade-left" data-aos-duration="1000">
+        <img class="border-2 border-emerald-500 rounded-full shadow-lg shadow-emerald-500" src="./assets/p2.png"
+          alt='image'>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- About Section     -->
+  <section id="about" class="  overflow-hidden ">
+    <div class="flex flex-col justify-center items-center mt-20">
+      <div class="" data-aos="fade-down">
+        <!-- About Heading -->
+        <h1 class="text-3xl font-bold">About Myself</h1>
+        <div class=" h1-bor border-2 "></div>
+      </div>
+
+      <!-- About Container -->
+      <div class="about-container mb:flex mb:flex-col mb:justify-between mb:items-center mb:mt-8 
+                2mb:flex 2mb:flex-col 2mb:justify-between 2mb:items-center
+                md:flex md:flex-row md:justify-between md:items-center">
+
+        <!-- About Image -->
+        <div class="md:w-2/5 mb:mt-8 md:mr-5 md:ml-10" data-aos="fade-right" data-aos-duration="1000">
+          <img src="./assets/about.svg" alt='image'>
+        </div>
+
+        <!-- About Para -->
+        <div class="para mb:mt-10 2mb:mt-10 mb:w-11/12 md:w-5/12 2xl:mt-2 md:mr-10 " data-aos="fade-up-left">
+          <p>
+            Hello! My name is Prem Kumar, and I'm a passionate full-stack
+            developer. I am graduated with a degree in Electrical and
+            Electronics Engineering and have been honing my skills in web
+            development ever since.
+          </p>
+          <hr class="hr" />
+          <p>
+            I'm comfortable working with a range of technologies, including
+            HTML, CSS, JavaScript, and various frameworks such as Bootstrap
+            and React. My experience also includes working with backend
+            technologies such as Node.js as well as databases like MySQL and
+            MongoDB.
+          </p>
+          <hr class="hr" />
+          <p>
+            I love learning new things and am always seeking to expand my
+            skill set. I'm a dedicated team player and enjoy collaborating
+            with others to achieve a common goal. In my free time, you can
+            find me tinkering with code and exploring new projects.
+          </p>
+          <hr class="hr" />
+          <p>
+            If you're interested in working together, feel free to reach out!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skill">
+    <div>
+      <div class="skills_container">
+        <div class="flex flex-col justify-center items-center">
+          <div data-aos="fade-down">
+            <h1 class="section-title text-2xl font-bold mt-20">Skills</h1>
+            <div class=" h1-bor border-2 "></div>
+          </div>
+          <h2 class="skills_subtitle text-2xl font-medium text-black m-2" data-aos="fade-down" data-aos-delay="250">
+            Professional Skills
+          </h2>
+          <p class="skills_text text-1xl font-light text-black mt-2" data-aos="fade-down" data-aos-delay="350">
+            Without sharpen your weapon standing on the battlefield would not
+            increase your chance of winning
+          </p>
+        </div>
+        <div class="contain mt-20 mb:flex mb:flex-col mb:justify-center mb:items-center     
+        2mb:flex 2mb:flex-col 2mb:justify-center 2mb:items-center 
+        sm:flex sm:flex-col sm:justify-center sm:items-center 
+        md:flex md:flex-row md:justify-around md:items-center">
+          <!-- SKILLS HTML -->
+          <div class="course ">
+            <div class="skills_data" data-aos="fade-right">
+              <div class="skills_name">
+                <i class="bx bxl-html5 bx-tada skill_icon"></i>
+                <span class="skill_name">Html5</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_html"></div>
+            </div>
+
+            <!-- SKILLS css -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-css3 bx-tada skill_icon"></i>
+                <span class="skill_name">CSS3</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_css"></div>
+            </div>
+
+            <!-- SKILLS JS -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-javascript bx-tada skill_icon"></i>
+                <span class="skill_name">Javascript</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_js"></div>
+            </div>
+
+            <!-- React -->
+
+            <div><span class="skill_percentage"></span></div>
+
+
+
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-react bx-tada skill_icon"></i>
+                <span class="skill_name">ReactJS</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_reactjs"></div>
+            </div>
+          </div>
+
+          <div class="tools">
+            <!-- SKILLS Tailwindcss -->
+
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-tailwind-css bx-tada skill_icon"></i>
+                <span class="skill_name">Tailwind css</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_css"></div>
+            </div>
+
+
+
+            <!-- SKILLS Boostrap -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-bootstrap bx-tada skill_icon"></i>
+                <span class="skill_name">Bootstrap</span>
+                <div class="skill_bar skill_boostrap"></div>
+              </div>
+            </div>
+
+
+            <!-- Skills React Redux/toolkit -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-react bx-tada skill_icon"></i>
+                <span class="skill_name">React Redux/toolkit</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_reactjs"></div>
+            </div>
+            <!-- github  -->
+
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-github bx-tada skill_icon"></i>
+                <span class="skill_name">Git & Github</span>
+              </div>
+
+              <div><span class="skill_percentage"></span></div>
+
+              <div class="skill_bar skill_git"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class=" flex justify-center font-bold text-3xl" data-aos="fade-down">
+      <div>
+        <h1 class="mt-20">Projects</h1>
+        <div class=" h1-bor border-2 "></div>
+      </div>
+    </div>
+    <div class="project-cards mt-16">
+      <div class="project-card">
+        <div class="project-img">
+          <img src="./assets/pro1.jpeg" alt="img">
+        </div>
+        <div class="project-content">
+          <h2>PortFolio</h2>
+          <p>Build a Responsive Website using React-Router</p>
+          <a href="">View Site</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img">
+          <img src="./assets/pro2.jpeg" alt="img">
+        </div>
+        <div class="project-content">
+          <h2>QR Code Generator</h2>
+          <p>Create a QR Code Generator Using React-UseState</p>
+          <a href="">View Site</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <div class="project-img">
+          <img src="./assets/profilecard.jpeg" alt="img">
+        </div>
+        <div class="project-content">
+          <h2>Profile-Card</h2>
+          <p>Create a dynamic profile Card Using React-Props</p>
+          <a href="">View Site</a>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <section id="education">
+    <div class=" flex justify-center font-bold text-3xl">
+      <div>
+
+        <h1 data-aos="fade-down" class="mt-20">Education</h1>
+        <div class=" h1-bor border-2 " data-aos="fade-down"></div>
+      </div>
+    </div>
+
+    <div class="timeline" data-aos="zoom-out">
+      <div class="container left-container">
+        <img src="./assets/stpauls.jpeg" alt="img">
+        <div class="text-box">
+          <h2>St.Pauls Matriculation Higher Secondary School</h2>
+          <small>2018-2019</small>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing eli
+          </p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+
+
+      <div class="container right-container">
+        <img src="./assets/kalai.png" alt="img">
+        <div class="text-box">
+          <h2>Sri Kalaivani Matriculation Higher Secondary School</h2>
+          <small>2018-2019</small>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+
+
+      <div class="container left-container">
+        <img src="./assets/clg.png" alt="img">
+        <div class="text-box">
+          <h2>Sri Ramasamy Naidu Memorial College</h2>
+          <small>2018-2019</small>
+          <p>Lorem ipsum dolor
+            dicta illum et ad repellat?</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+
+
+      <div class="container right-container">
+        <img src="./assets/clg.png" alt="img">
+        <div class="text-box">
+          <h2>Intern At Wiz Inoa</h2>
+          <small>2018-2019</small>
+          <p>Lorem ipsum dolor sit
+            iste
+            dicta illum et ad repellat?
+          </p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class=" flex justify-center font-bold text-3xl ">
+      <div>
+
+        <h1 data-aos="fade-down" class="mt-10">Get In Touch</h1>
+        <div class=" h1-bor border-2 " data-aos="fade-down"></div>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="footer-width contact">
+        <h2 class="md:mt-20">Contact</h2>
+        <div class="social-media">
+          <div class="flex flex-row">
+            <span><i class="fa-solid fa-location-dot" style="color: #000000;"></i></span>
+            <p>1/1B, Thirupathi Raja Street Kalugumalai</p>
+          </div>
+          <div class="flex flex-row">
+
+            <span>
+              <i class="fa-solid fa-envelope" style="color: #000000;"></i>
+            </span>
+            <p>premkpk2004@gmail.com
+            </p>
+          </div>
+          <div class="flex flex-row">
+
+            <span>
+              <i class="fa-solid fa-phone" style="color: #000000;"></i>
+            </span>
+            <p>6374580596
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer-width link">
+        <h2>Quick Link</h2>
+        <ul class="quick">
+          <li class="quick"><a href="#home">Home</a></li>
+          <li class="quick"><a href="#about">About</a></li>
+          <li class="quick"> <a href="#skill">Skills</a></li>
+          <li class="quick"><a href="#project">Projects</a></li>
+          <li class="quick"><a href="#education">Education</a></li>
+          <li class="quick"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-width follow">
+        <h2>Follow For More</h2>
+        <div class="">
+          <a href="https://www.linkedin.com/in/prem04/"
+            class="rounded-full  bg-stone-900 px-3  py-3 bx bxl-linkedin-square text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+          </a>
+          <a href=""
+            class="rounded-full  bg-stone-900 px-3  py-3  ml-1 bx bxl-instagram  text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+          </a>
+          <a href=""
+            class="rounded-full  bg-stone-900 px-3  py-3 ml-1  bx bxl-whatsapp text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ">
+
+            <a href=""
+              class="rounded-full  bg-stone-900 px-3  py-3 ml-1 bx bxl-github text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-10 text-center text-2xl font-bold ">
+      <h1>Ready To Contribute And Hire Me!</h1>
+    </div>
+
+  </section>
+
+
+
+  </section>
+
+  <div class="footer text-1xl font-medium py-3 w-full text-center">
+    <p>Crafted with passion, powered by creativity ©[Prem Kumar], All Rights Reserved.</p>
+
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init()</script>
+
+
+</body>
+
+</html>
+
+<!-- <div>
+  <h2 class="text-2xl font-bold ">Follow For More</h2>
+
+</div>
+<div class="mt-8 ml-5">
+  <a href="https://www.linkedin.com/in/prem04/"
+    class="rounded-full  bg-stone-900 px-3  py-3 bx bxl-linkedin-square text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+  </a>
+  <a href=""
+    class="rounded-full  bg-stone-900 px-3  py-3  ml-1 bx bxl-instagram  text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+  </a>
+  <a href=""
+    class="rounded-full  bg-stone-900 px-3  py-3 ml-1  bx bxl-whatsapp text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ">
+
+    <a href=""
+      class="rounded-full  bg-stone-900 px-3  py-3 ml-1 bx bxl-github text-white  hover:text-emerald-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300">
+    </a>
+</div>
+
+
+
+  <div class="work_container bd_grid mt-10
+                mb:flex mb:flex-col mb:justify-center mb:items-center mb:w-full
+                md:flex md:flex-row md:justify-around md:items-center md:w-full" data-aos="fade-down"
+      data-aos-delay="250">
+      <div class="card-2">
+        <div class="card-content-2">
+          <p class="title-para">Sri Ramasamy Naidu Memorial College</p>
+          <br />
+          <p class="card-para-2">Bsc Computer Science</p>
+          <p class="card-para-2">2021-2024</p>
+          <p class="card-para-2">CGPA - 7.30 out of 10</p>
+        </div>
+      </div>
+
+      <div class="card-2">
+        <div class="card-content-2">
+          <p class="title-para"> St.Paul's Matriculation and Higher Secondary School</p>
+          <br />
+          <p class="card-para-2">HSC</p>
+          <p class="card-para-2">2021</p>
+          <p class="card-para-2">HSC - 85 out of 100</p>
+        </div>
+      </div>
+
+      <div class="card-2">
+        <div class="card-content-2">
+          <p class="title-para">Kalaivani Matriculation and higher secondary school</p>
+          <br />
+          <p class="card-para-2">SSLC</p>
+          <p class="card-para-2">2019</p>
+          <p class="card-para-2">SSLC - 87 out of 100</p>
+        </div>
+      </div>
+
+    </div> -->
